@@ -117,11 +117,30 @@
 //}
 
 
-//编写程序数一下 1到 100 的所有整数中出现多少次数字 9
-#include<stdio.h>
-
-int main()
-{
-
-	return 0;
-}
+////编写程序数一下 1到 100 的所有整数中出现多少次数字 9
+//#include<stdio.h>
+//
+//int Count()
+//{
+//	int i = 1;
+//	int count = 0;
+//	while (i <= 100)
+//	{
+//		if (i % 10 == 9)
+//		{
+//			++count;
+//		}
+//		if (i / 10 == 9)
+//		{
+//			++count;
+//		}
+//		++i;
+//	}
+//	return count;
+//}
+//
+//int main()
+//{
+//	printf("9的个数：%d", Count());
+//	return 0;
+//}
