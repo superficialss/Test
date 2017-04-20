@@ -201,7 +201,7 @@ void YangHuiTriangle(int level)
 	}
 
 	int j = 0;
-	for (i = 0; i < level && j < level; i++, j++) 
+	for (i = 0, j = 0; i < level && j < level; i++, j++) 
 	{
 		buf[i][0] = 1;
 		buf[i][j] = 1;
@@ -218,7 +218,7 @@ void YangHuiTriangle(int level)
 	for (i = 0; i < level; i++) 
 	{
 		int k = 0;
-		for (; k < level - i; k++)
+		for (k = 0; k < level - i; k++)
 		{
 			printf("%2c", ' ');
 		}
@@ -229,7 +229,7 @@ void YangHuiTriangle(int level)
 		printf("\n");
 	}
 
-	for (; i < level; i++) 
+	for (i = 0; i < level; i++) 
 	{
 		free(buf[i]);
 	}
