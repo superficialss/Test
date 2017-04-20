@@ -195,7 +195,7 @@ void YangHuiTriangle(int level)
 {
 	int** buf = (int*)malloc(sizeof(int*)*level);
 	int i = 0;
-	for (; i < level; i++) 
+	for (i = 0; i < level; i++) 
 	{
 		buf[i] = (int*)malloc(sizeof(int)*level);
 	}
