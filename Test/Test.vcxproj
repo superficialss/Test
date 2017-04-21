@@ -147,6 +147,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Test1.c" />
+    <ClCompile Include="Test10.c" />
     <ClCompile Include="Test2.c" />
     <ClCompile Include="Test3.c" />
     <ClCompile Include="Test4.c" />
