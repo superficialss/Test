@@ -186,61 +186,61 @@
 //}
 
 
-//Ñî»ÔÈý½Ç
-#include<stdio.h>
-#include<malloc.h>
-#pragma warning(disable:4996)
-
-void YangHuiTriangle(int level)
-{
-	int** buf = (int*)malloc(sizeof(int*)*level);
-	int i = 0;
-	for (i = 0; i < level; i++) 
-	{
-		buf[i] = (int*)malloc(sizeof(int)*level);
-	}
-
-	int j = 0;
-	for (i = 0, j = 0; i < level && j < level; i++, j++) 
-	{
-		buf[i][0] = 1;
-		buf[i][j] = 1;
-	}
-
-	for (i = 2; i < level; i++) 
-	{
-		for (j = 1; j < i; j++) 
-		{
-			buf[i][j] = buf[i - 1][j - 1] + buf[i - 1][j];
-		}
-	}
-
-	for (i = 0; i < level; i++) 
-	{
-		int k = 0;
-		for (k = 0; k < level - i; k++)
-		{
-			printf("%2c", ' ');
-		}
-		for (j = 0; j <= i; j++)
-		{
-			printf("%3d ", buf[i][j]);
-		}
-		printf("\n");
-	}
-
-	for (i = 0; i < level; i++) 
-	{
-		free(buf[i]);
-	}
-	free(buf);
-}
-
-int main()
-{
-	int level = 0;
-	printf("ÇëÊäÈëÑî»ÔÈý½ÇµÄ²ãÊý£º");
-	scanf("%d", &level);
-	YangHuiTriangle(level);
-	return 0;
-}
+////Ñî»ÔÈý½Ç
+//#include<stdio.h>
+//#include<malloc.h>
+//#pragma warning(disable:4996)
+//
+//void YangHuiTriangle(int level)
+//{
+//	int** buf = (int*)malloc(sizeof(int*)*level);
+//	int i = 0;
+//	for (i = 0; i < level; i++) 
+//	{
+//		buf[i] = (int*)malloc(sizeof(int)*level);
+//	}
+//
+//	int j = 0;
+//	for (i = 0, j = 0; i < level && j < level; i++, j++) 
+//	{
+//		buf[i][0] = 1;
+//		buf[i][j] = 1;
+//	}
+//
+//	for (i = 2; i < level; i++) 
+//	{
+//		for (j = 1; j < i; j++) 
+//		{
+//			buf[i][j] = buf[i - 1][j - 1] + buf[i - 1][j];
+//		}
+//	}
+//
+//	for (i = 0; i < level; i++) 
+//	{
+//		int k = 0;
+//		for (k = 0; k < level - i; k++)
+//		{
+//			printf("%2c", ' ');
+//		}
+//		for (j = 0; j <= i; j++)
+//		{
+//			printf("%3d ", buf[i][j]);
+//		}
+//		printf("\n");
+//	}
+//
+//	for (i = 0; i < level; i++) 
+//	{
+//		free(buf[i]);
+//	}
+//	free(buf);
+//}
+//
+//int main()
+//{
+//	int level = 0;
+//	printf("ÇëÊäÈëÑî»ÔÈý½ÇµÄ²ãÊý£º");
+//	scanf("%d", &level);
+//	YangHuiTriangle(level);
+//	return 0;
+//}
